@@ -1,0 +1,102 @@
+#include <iostream>
+#include <algorithm>
+//
+////Класс содержит одно поле целого типа от 1 до 7, обозначающее номер дня недели : Необходимо перегрузить постфиксный оператор ++, с помощью которого текущее значение
+//увеличивается на 1, если оно меньше семи, а значение 7 сбрасывается до единицы.
+
+class Number
+{
+private:
+	int number;
+public:
+	Number(int _number = 1) : number(_number) {}
+
+	Number& operator++(int)
+	{
+		if (number < 7)
+			number++;
+		else if (number == 7)
+			number = 1;
+		return *this;
+	}
+};
+
+int main()
+{
+
+}
+
+
+
+
+
+////Задан класс Circle(Круг) с описанным в нем набором переменных : centerX, centerY
+////(Координаты центра круга) с типом double, radius(Радиус круга) с типом double, color
+////(Цвет) с типом int.
+////Описать в классе три конструктора со следующими наборами входных параметров :
+////● radius;
+////● centerX, centerY, radius;
+////● centerX, centerY, radius, color.
+using namespace std;
+class Circle {
+	double centerX, centerY,radius;
+	int color;
+public:
+	Circle(double _radius) {
+		radius = _radius;
+		centerX = 0.0;
+		centerY = 0.0;
+		color = 0;
+	}
+	Circle(double _centerX, double _centerY, double _radius) {
+		centerX = _centerX;
+		centerY = _centerY;
+		radius = _radius;
+		color = 0;
+	}
+
+	Circle(double _centerX, double _centerY, double _radius, int _color) {
+		this->centerX = _centerX;
+		this->centerY = _centerY;
+		this->radius = _radius;
+		this->color = _color;
+		cout << "konstruktor " <<this  << endl;
+	}
+
+	// конструктор копирования
+
+	Circle(const Circle& obj) {
+		this->centerX = obj.centerX;
+		this->centerY = obj.centerY;
+		this->radius = obj.radius;
+		this->color = obj.color;
+
+
+		n.new.n
+		a = new int(*num.a);
+		cout << "konstr copy" <<this <<endl;
+	}
+	//void print() {
+	//	cout << centerX << "  " << centerY << "  " << radius << "  " << color << endl;
+	//}
+
+
+ перегрузка вывода
+	ostream& operator<<(ostream& out, Circle &c) {
+		out << c.color;
+		return out;
+	}
+ void show() {
+	 cout << A::a << A::b<< a << b 
+ }
+};
+int main() {
+Circle a(2, 1, 4);
+//a.print();
+
+Circle b(4, 52, 1, 4);
+Circle c(b);
+//b.print();
+}
+
+
